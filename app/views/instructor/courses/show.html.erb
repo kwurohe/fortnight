@@ -38,13 +38,18 @@
   
   <br />
   <br />
-  <div class="text-center">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
-      Add a new section...
-    </button>
-  </div>
-
+	<div class="row">
+		<div class="col-10 col-sm-5 offset-1 text-left">
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#newSectionModal">
+				Add a new section...
+			</button>
+		</div>
+		<div class="col-10 col-sm-5 text-right">
+			<%= link_to "Preview as student", course_path, class: "btn btn-secondary btn-md" %>
+		</div>
+	</div>
+  
   <br />
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
